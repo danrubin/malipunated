@@ -1,0 +1,384 @@
+/*
+-----------------------------------------------
+malipunations stylesheet
+edited: 2008-08-23
+author: Dan Rubin
+----------------------------------------------- */
+
+@import url("reset.css");
+
+
+/* baselines for checking vertical rhythm */
+.post,
+#comments {
+	/*background:url(images/baseline-24.png);*/
+}
+
+/* WordPress inserts <br/> on the Archives and Links pages - kill it */
+body.pageid-75 br,
+body.pageid-76 br {
+	display:none;
+}
+
+html {
+	background:url(images/bg_html.png) no-repeat bottom right;
+}
+
+body {
+	background:url(images/bg_body.png) no-repeat;
+	font-family:georgia,serif;
+	color:#333;
+	text-shadow:#000 0 0 0;
+	min-width:918px;
+	min-height:750px;
+}
+
+#header {
+	position:relative;
+	background:url(images/bg_header.png) no-repeat top right;
+	height:150px;
+}
+
+/* Primary navigation */
+#nav {
+	position:absolute;
+	left:139px;
+	background:url(images/bg_nav.png) no-repeat right;
+	padding-right:10px;
+	font-size:14px;
+	line-height:46px;
+}
+#nav li {
+	float:left;
+	margin-right:1px;
+}
+#nav a {
+	float:left;
+	padding-left:6px;
+	color:#4c4c4c;
+	text-decoration:none;
+}
+#nav a span {
+	float:left;
+	height:35px;
+	padding-right:6px;
+}
+
+#nav a:hover strong {
+	color:#333;
+	border-bottom:2px solid #ddd;
+}
+body.home #nav #nav-home a:hover strong,
+body.pageid-16 #nav #nav-books a:hover strong,
+body.pageid-3 #nav #nav-history a:hover strong,
+body.pageid-4 #nav #nav-experiences a:hover strong,
+body.pageid-5 #nav #nav-contact a:hover strong {
+ 	color:#fff;
+ 	border:none;
+}
+ 
+/*#nav #nav-current a,
+#nav #nav-current a span {
+    background:url(images/bg_nav_current.png) no-repeat;
+    color:#fff;
+}
+#nav #nav-current a span {
+    background-position:right;
+}*/
+
+body.home #nav #nav-home a,
+body.home #nav #nav-home a span,
+body.pageid-16 #nav #nav-books a,
+body.pageid-16 #nav #nav-books a span,
+body.pageid-3 #nav #nav-history a,
+body.pageid-3 #nav #nav-history a span,
+body.pageid-4 #nav #nav-experiences a,
+body.pageid-4 #nav #nav-experiences a span,
+body.pageid-5 #nav #nav-contact a,
+body.pageid-5 #nav #nav-contact a span {
+	background:url(images/bg_nav_current.png) no-repeat;
+	color:#fff;
+}
+
+body.home #nav #nav-home a span,
+body.pageid-16 #nav #nav-books a span,
+body.pageid-3 #nav #nav-history a span,
+body.pageid-4 #nav #nav-experiences a span,
+body.pageid-5 #nav #nav-contact a span { background-position:right; }
+
+#search {
+	display:none;
+	background:red;
+}
+
+#logo {
+	position:absolute;
+	left:80px;
+	top:45px;
+}
+#logo a {
+	width:605px;
+	height:102px;
+	display:block;
+	background:url(images/logo.png) no-repeat;
+	text-indent:-9999px;
+}
+#logo a:hover { background-position:0 -102px; }
+#tagline { width:0;height:0;visibility:hidden; }
+
+#content {
+    position:relative;
+	width:650px;
+	margin:35px 0 0 134px;
+	border-bottom:3px double #f5f5f5;
+}
+body.home #content {
+	border:none;
+}
+
+/* Post navigation */
+#nav-above,
+#nav-below {
+	position:absolute;
+	width:630px;
+}
+#nav-above { top:-32px; }
+#nav-below { bottom:-22px; }
+
+.nav-previous,
+.nav-next {
+	float:left;
+	width:50%;
+}
+.nav-next { text-align:right; }
+
+.nav-previous a,
+.nav-next a {
+	color:#aaa;
+	font-size:11px;
+	letter-spacing:.1em;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+.nav-previous a:hover,
+.nav-next a:hover { border-bottom:2px solid #f5f5f5; }
+
+/* Posts */
+#posts {
+	padding:0 10px;
+}
+
+#content h1, #content h1 a {
+	margin-bottom:20px;
+	color:#4c4c4c;
+	font-size:28px;
+	text-decoration:none;
+	letter-spacing:-1px;
+}
+
+#content h2 {
+	font-size:18px;
+	line-height:24px;
+}
+/* hide the subheading on the Links page (delete this if more categories are added */
+#posts ul#links-page h2 {
+	display:none;
+}
+body.archive #posts h2 {
+	font-size:20px;
+	margin-bottom:18px;
+}
+
+#posts ul {
+	margin:24px 0;
+}
+#posts ul#archives-page,
+#posts ul#links-page {
+	margin:0;
+}
+
+#posts li,
+#posts ul#archives-page li li,
+#posts ul#links-page li li {
+	line-height:24px;
+	padding-left:16px;
+	background:url(images/bullet_star.png) no-repeat 1px;
+}
+#posts ul#archives-page li,
+#posts ul#links-page li {
+	padding:0;
+	background:none;
+}
+
+#posts a {
+	color:#555;
+	text-decoration:none;
+	border-bottom:2px solid #f5f5f5;
+}
+#posts .edit-link a {
+    color:#d96666;
+}
+#posts a:hover {
+	color:#333;
+	border-color:#ccc;
+}
+
+#posts p,
+body.archive #posts .excerpt p {
+	margin-bottom:12px;
+	font-size:16px;
+	line-height:24px;
+}
+
+.post {
+	position:relative;
+}
+
+.post .meta {
+	position:absolute;
+	top:-15px;
+	left:-144px;
+	width:140px;
+	height:59px;
+	background:url(images/bracket.png) no-repeat right;
+}
+
+#posts .date,
+#posts .numberofcomments {
+	margin:0 24px 0 0;
+	font-size:12px;
+	line-height:12px;
+	color:#666;
+	text-align:right;
+}
+#posts .date { margin-top:16px; }
+#posts .numberofcomments { margin-top:2px;font-size:11px; }
+
+#posts .excerpt p,
+#posts .post-content p:first-child {
+	margin-bottom:24px;
+	font-size:20px;
+	line-height:24px;
+}
+
+.post .readmore a {
+	color:#999;
+	font-size:20px;
+	text-decoration:none;
+}
+.post .readmore a:hover { color:#777; }
+
+body.archive .post {
+	padding-bottom:12px;
+}
+body.archive .post .readmore a {
+	font-size:16px;
+}
+
+/* Comments */
+#comments {
+	width:630px;/* plus the padding below = 650px */
+	margin-left:-10px;
+	padding:12px 10px;
+	border-top:3px double #f5f5f5;
+	font-size:16px;
+	line-height:24px;
+}
+
+#comments #login {
+	margin-bottom:12px;
+}
+#comments #login a {
+	color:#999;
+}
+
+#comments textarea {
+	border-color:#ddd;
+	width:100%;
+	height:119px;
+}
+
+/* Footer */
+#footer {
+	width:650px;
+	margin:25px 0 0 134px;
+	padding:55px 0 18px;
+	background:url(images/bg_footer_top.png) no-repeat;
+	color:#666;
+	font-size:14px;
+}
+
+#footer h2 {
+	text-indent:-9999px;
+	margin:0 0 0 4px;
+	height:22px;
+	background-repeat:no-repeat;
+}
+#footer-recententries h2 { background-image:url(images/hdr_recententries.png); }
+#footer-links h2 { background-image:url(images/hdr_linksofinterest.png); }
+#footer-bio h2 { background-image:url(images/hdr_abouttheauthor.png); }
+
+#footer #footer-info {
+	margin:0 0 10px;
+	padding:0 0 40px;
+	background:url(images/bg_footer_bottom.png) no-repeat bottom;
+}
+
+#footer #footer-info li {
+	margin-bottom:1px;
+}
+#footer #footer-info li a {
+	display:block;
+	padding:0 3px 0 17px;
+	color:#999;
+	background:#fafafa url(images/bullet_star.png) no-repeat 4px;
+	line-height:23px;
+	text-decoration:none;
+}
+#footer #footer-info li a:hover {
+	background-color:#fcfcfc;
+	color:#808080;
+}
+
+#footer #footer-info div {
+	float:left;
+	width:203px; /* each column needs a width becuase the background is set here */
+	margin:-25px 0;
+	padding:0 10px 0 0;
+	background-color:#f5f5f5;
+}
+
+#footer #footer-info #footer-recententries {
+	padding-left:7px;
+}
+
+#footer #footer-info #footer-bio {
+	width:206px; /* fills out the remaining pixels so the background meets the right edge of the footer-info block */
+	padding-left:1px; /* added to the 4px inset for other elements = 5px */
+}
+#footer #footer-info #footer-bio p {
+	padding:1px 0 0 4px;
+	line-height:20px;
+}
+
+#footer .readmore {
+	margin:3px 0 0;padding:0 0 0 4px;
+}
+#footer .readmore a {
+	color:#999;
+	font-style:italic;
+	text-decoration:none;
+	line-height:25px;
+}
+#footer .readmore a:hover { color:#777; }
+
+#rsslink {
+	float:right;
+}
+#copyright, #rsslink,
+#copyright a, #rsslink a {
+	font-size:11px;
+	color:#b2b2b2;
+	text-decoration:none;
+}
+#copyright a:hover, #rsslink a:hover { color:#999; }

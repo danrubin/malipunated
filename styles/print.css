@@ -1,0 +1,78 @@
+/*
+-----------------------------------------------
+malipunations print stylesheet
+edited: 2008-01-17
+author: Dan Rubin
+----------------------------------------------- */
+
+html,
+body,
+#header {
+    background:white;
+    color:black;
+}
+
+#header {
+	height:80px;
+}
+
+#logo {
+	top:0;
+	left:10px;
+	letter-spacing:-1px;
+}
+#logo a {
+	width:auto;
+	height:auto;
+	background:transparent;
+	text-indent:0;
+	text-decoration:none;
+	color:black;
+	font-size:48px;
+}
+
+#nav,
+#search {
+    display:none;
+}
+
+#content {
+	border:none;
+	margin:0;
+}
+
+#nav-above,
+#nav-below {
+	display:none;
+}
+
+#content h1, #content h1 a {
+	color:black;
+}
+
+.post {
+	padding-top:18px;
+}
+
+.post .meta {
+	top:0;
+	left:0;
+	width:auto;
+	height:auto;
+	background:transparent;
+}
+
+#posts .date {
+	text-align:left;
+	color:black;
+	margin:0;
+	font-size:14px;
+}
+#posts .numberofcomments {
+	display:none;
+}
+
+#comments,
+#footer {
+	display:none;
+}
